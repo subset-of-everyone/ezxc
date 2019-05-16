@@ -1,5 +1,5 @@
-title: meteor-application-template-react
-description: A template for quickly starting Meteor application development
+title: ezec
+description: Web application to manage peer evaluation extra credit in ICS 311 at the University of Hawaii at Manoa.
 google_analytics:
 show_downloads: true
 theme: jekyll-theme-cayman
