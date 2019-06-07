@@ -1,21 +1,25 @@
 import { Mongo } from "meteor/mongo";
-import { SimpleSchema } from "simpl-schema";
+import SimpleSchema from "simpl-schema";
 import { Tracker } from "meteor/tracker";
 
-const Forms = new Mongo.Collection("Forms");
+const Sections = new Mongo.Collection("Sections");
 
-const FormSchema = new SimpleSchema({
-  formNumber: Number,
+const SectionSchema = new SimpleSchema({
   sectionNumber: String,
-  date: Date,
-  roster: [{
-    studentName: String,
-    studentId: String,
-    presentOrNot: Boolean,
-    points: Number,
+  instructors: [{
+    instructorName: String,
+    instructorType: ["Professor", "TA"],
+    roster: [{
+      studentName: String,
+      studentId: String,
+    }],
+    forms: [{
+      formNumber: Number,
+      date: Date,
+    }],
   }],
 }, { tracker: Tracker });
 
-Forms.attachSchema(FormSchema);
+Sections.attachSchema(SectionSchema);
 
-export { Forms, FormSchema };
+export { Sections, SectionSchema };
