@@ -25,11 +25,15 @@ const SectionSchema = new SimpleSchema({
       presentOrNot: Boolean,
     }],
     pointsGivenLog: [{
-      studentName: String,
-      received: [{
-        studentName: String,
+      givenName: String,
+      given: [{
+        receivedName: String,
         points: Number,
       }],
+    }],
+    groups: [{
+      groupId: String,
+      members: Array,
     }],
   }],
 }, { tracker: Tracker });
