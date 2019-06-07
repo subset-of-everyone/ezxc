@@ -8,12 +8,7 @@ const StudentSchema = new SimpleSchema({
   studentName: String,
   studentId: String,
   sectionNumber: String,
-  pointsGivenToThisStudent: [{
-    formNumber: Number,
-    date: Date,
-    points: Number,
-    allocatedPoints: Boolean,
-  }],
+  totalPoints: Number,
 }, { tracker: Tracker });
 
 Students.attachSchema(StudentSchema);

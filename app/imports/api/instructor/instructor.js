@@ -6,7 +6,7 @@ const Instructors = new Mongo.Collection("Instructors");
 
 const InstructorSchema = new SimpleSchema({
   instructorName: String,
-  type: ["TA", "Professor"],
+  instructorType: ["TA", "Professor"],
   sectionNumber: String,
 }, { tracker: Tracker });
 

@@ -8,12 +8,7 @@ const FormSchema = new SimpleSchema({
   formNumber: Number,
   sectionNumber: String,
   date: Date,
-  roster: [{
-    studentName: String,
-    studentId: String,
-    presentOrNot: Boolean,
-    points: Number,
-  }],
+  topic: String,
 }, { tracker: Tracker });
 
 Forms.attachSchema(FormSchema);

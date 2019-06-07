@@ -9,13 +9,27 @@ const SectionSchema = new SimpleSchema({
   instructors: [{
     instructorName: String,
     instructorType: ["Professor", "TA"],
-    roster: [{
-      studentName: String,
-      studentId: String,
-    }],
-    forms: [{
+  }],
+  roster: [{
+    studentName: String,
+    formsFilledOut: Array,
+    pointsReceived: [{
       formNumber: Number,
-      date: Date,
+      points: Number,
+    }],
+  }],
+  forms: [{
+    formNumber: Number,
+    attendance: [{
+      studentName: String,
+      presentOrNot: Boolean,
+    }],
+    pointsGivenLog: [{
+      studentName: String,
+      received: [{
+        studentName: String,
+        points: Number,
+      }],
     }],
   }],
 }, { tracker: Tracker });
