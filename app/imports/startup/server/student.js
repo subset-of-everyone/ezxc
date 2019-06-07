@@ -9,7 +9,11 @@ Meteor.publish("Students", function publish()
   if (this.userId)
   {
     const studentUsername = Meteor.users.findOne(this.userId).username;
-    return Students.find({ studentName: studentUsername });
+    const studentSectionNumber = Students.find({ studentName: studentUsername }).sectionNumber;
+    return Students.find(
+        { studentName: studentUsername },
+        { sectionNumber: studentSectionNumber },
+    );
   }
   return this.ready();
 });
