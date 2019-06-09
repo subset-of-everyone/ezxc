@@ -18,24 +18,6 @@ const SectionSchema = new SimpleSchema({
       points: Number,
     }],
   }],
-  forms: [{
-    formNumber: Number,
-    attendance: [{
-      studentName: String,
-      presentOrNot: Boolean,
-    }],
-    pointsGivenLog: [{
-      givenName: String,
-      given: [{
-        receivedName: String,
-        points: Number,
-      }],
-    }],
-    groups: [{
-      groupId: String,
-      members: Array,
-    }],
-  }],
 }, { tracker: Tracker });
 
 Sections.attachSchema(SectionSchema);

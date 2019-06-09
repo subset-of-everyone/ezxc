@@ -3,4 +3,5 @@ import "./stuff.js";
 import "./instructor.js";
 import "./student.js";
 import "./form.js";
-import "./sections.js";
+import "./section.js";
+import "./completedForm.js";

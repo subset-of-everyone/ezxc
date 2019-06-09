@@ -9,11 +9,7 @@ Meteor.publish("Students", function publish()
   if (this.userId)
   {
     const studentUsername = Meteor.users.findOne(this.userId).username;
-    const studentSectionNumber = Students.find({ studentName: studentUsername }).sectionNumber;
-    return Students.find(
-        { studentName: studentUsername },
-        { sectionNumber: studentSectionNumber },
-    );
+    return Students.find({ studentName: studentUsername });
   }
   return this.ready();
 });
@@ -25,7 +21,7 @@ Meteor.publish("StudentAdmin", function publish()
   if (this.userId && Roles.userIsInRole(this.userId, "admin"))
   {
     const instructorUsername = Meteor.users.findOne(this.userId).username;
-    const instructorSectionNumber = Instructors.find({ instructorName: instructorUsername }).sectionNumber;
+    const instructorSectionNumber = Instructors.findOne({ instructorName: instructorUsername }).sectionNumber;
     return Students.find({ sectionNumber: instructorSectionNumber });
   }
   return this.ready();
