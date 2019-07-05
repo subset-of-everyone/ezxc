@@ -1,0 +1,18 @@
+.navbar {
+  background-color: #424242 !important;
+  box-shadow: none;
+  border: none;
+}
+
+.navbar-item-color {
+  color: #A9A9A9 !important;
+}
+
+.dropdown .text {
+  font-size: 16px;
+}
+
+.navbar-ezxc {
+  position: absolute;
+  left: 38%;
+}
