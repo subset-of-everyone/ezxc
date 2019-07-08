@@ -1,7 +1,9 @@
+/* NavBar.jsx */
+
 .navbar {
   background-color: #424242 !important;
-  box-shadow: none;
-  border: none;
+  box-shadow: none !important;
+  border: none !important;
 }
 
 .navbar-item-color {
@@ -14,5 +16,36 @@
 
 .navbar-ezxc {
   position: absolute;
-  left: 38%;
+  left: 41%;
 }
+
+
+/* CreateCourse.jsx */
+
+.create-course-form-headers {
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+  padding-bottom: 15px;
+}
+
+.create-course-table {
+  border: none !important;
+  box-shadow: none !important;
+  background-color: #F9FAFB !important;
+}
+
+.create-course-buttons {
+  position: absolute;
+  left: 47%;
+  margin-top: 30px;
+  color: #FF7042 !important;
+  border-radius: 50%;
+  box-shadow: 0 7px 10px gray !important;
+}
+
+.create-course-sections {
+  padding: 6px 0 6px 0 !important;
+  font-size: 16px;
+}
+

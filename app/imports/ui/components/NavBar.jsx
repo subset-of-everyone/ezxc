@@ -1,14 +1,13 @@
 import React from "react";
-import { Menu, Dropdown, Header, Container, Segment } from "semantic-ui-react";
+import { Menu, Dropdown, Header, Container } from "semantic-ui-react";
 
 class NavBar extends React.Component
 {
   render()
   {
     return (
-        <div className="navbar" style={{ marginBottom: "20px" }}>
-          <Menu borderless className="navbar">
-            <Container style={{ position: "relative" }}>
+        <div className="navbar" style={{ marginBottom: "50px" }}>
+          <Menu borderless className="navbar" style={{ position: "relative" }}>
             <Menu.Item className="navbar-item-color" style={{ fontSize: "16px" }}>
               About
             </Menu.Item>
@@ -23,7 +22,6 @@ class NavBar extends React.Component
                 </Dropdown.Menu>
               </Dropdown>
             </Menu.Item>
-            </Container>
           </Menu>
         </div>
     );
