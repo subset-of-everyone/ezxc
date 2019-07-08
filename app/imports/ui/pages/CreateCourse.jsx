@@ -111,8 +111,8 @@ export default class CreateCourse extends React.Component
             </Grid.Row>
             <Grid.Row>
               <Grid.Column> </Grid.Column>
-              <Grid.Column>
-                <Button size="huge">Create Course</Button>
+              <Grid.Column style={{ position: "relative" }}>
+                <Button style={{ position: "absolute", right: "33%" }} size="huge">Create Course</Button>
               </Grid.Column>
             </Grid.Row>
           </Grid>
