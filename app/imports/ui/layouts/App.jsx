@@ -16,6 +16,7 @@ import Signin from "../pages/Signin";
 import Signup from "../pages/Signup";
 import Signout from "../pages/Signout";
 import CreateCourse from "../pages/CreateCourse";
+import ViewSection from "../pages/ViewSection";
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component
@@ -29,6 +30,7 @@ class App extends React.Component
             <Switch>
               <Route exact path="/" component={Landing}/>
               <Route path="/instructor/create_course" component={CreateCourse}/>
+              <Route path="/instructor/view_section" component={ViewSection}/>
               <Route path="/signin" component={Signin}/>
               <Route path="/signup" component={Signup}/>
               <ProtectedRoute path="/list" component={ListStuff}/>

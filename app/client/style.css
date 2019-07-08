@@ -14,20 +14,8 @@
   font-size: 16px;
 }
 
-.navbar-ezxc {
-  position: absolute;
-  left: 41%;
-}
-
 
 /* CreateCourse.jsx */
-
-.create-course-form-headers {
-  font-size: 20px;
-  font-weight: bold;
-  display: block;
-  padding-bottom: 15px;
-}
 
 .create-course-table {
   border: none !important;
