@@ -5,7 +5,7 @@ class Footer extends React.Component
 {
   render()
   {
-    const divStyle = { paddingTop: "15px" };
+    const divStyle = { paddingTop: "60px" };
     return (
         <footer>
           <div style={divStyle} className="ui center aligned container">
