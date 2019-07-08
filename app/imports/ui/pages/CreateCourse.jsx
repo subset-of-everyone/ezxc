@@ -66,9 +66,9 @@ export default class CreateCourse extends React.Component
                 <Table celled>
                   <Table.Header>
                     <Table.Row>
-                      <Table.HeaderCell>Name</Table.HeaderCell>
-                      <Table.HeaderCell width="4">ID</Table.HeaderCell>
-                      <Table.HeaderCell width="3">Section #</Table.HeaderCell>
+                      <Table.HeaderCell>Name<Icon name="triangle down" /></Table.HeaderCell>
+                      <Table.HeaderCell width="4">ID<Icon name="triangle down" /></Table.HeaderCell>
+                      <Table.HeaderCell width="3">Section #<Icon name="triangle down" /></Table.HeaderCell>
                     </Table.Row>
                   </Table.Header>
                   <Table.Body>
