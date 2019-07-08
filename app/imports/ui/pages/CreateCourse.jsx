@@ -15,7 +15,7 @@ export default class CreateCourse extends React.Component
             <Grid.Row style={{ padding: "35px 0px 35px 0px" }}>
               <Grid.Column>
                 <Form>
-                  <label className="form-headers">Course name</label>
+                  <label className="create-course-form-headers">Course name</label>
                   <Form.Input name="Course name" placeholder="Name"/>
                 </Form>
               </Grid.Column>
@@ -26,7 +26,7 @@ export default class CreateCourse extends React.Component
             <Grid.Row style={{ padding: "35px 0px 35px 0px" }}>
               <Grid.Column>
                 <Form style={{ position: "relative" }}>
-                  <label className="form-headers">Add sections</label>
+                  <label className="create-course-form-headers">Add sections</label>
                   <Form.Input name="Add sections" placeholder="Section #"/>
                   <Button inverted style={{ padding: "0 0 0 0" }} circular icon>
                     <Icon className="create-course-buttons" name="plus circle" size="big" />
@@ -35,25 +35,17 @@ export default class CreateCourse extends React.Component
               </Grid.Column>
               <Grid.Column>
                 <Grid columns={2} textAlign="center">
-                  <Grid.Row className="create-course-sections">
-                    Section 1 (1)
-                  </Grid.Row>
-                  <Grid.Row className="create-course-sections">
-                    Section 2 (3)
-                  </Grid.Row>
-                  <Grid.Row className="create-course-sections">
-                    Section 1 (1)
-                  </Grid.Row>
-                  <Grid.Row className="create-course-sections">
-                    Section 2 (3)
-                  </Grid.Row>
+                  <Grid.Row className="create-course-sections">Section 1 (1)</Grid.Row>
+                  <Grid.Row className="create-course-sections">Section 2 (3)</Grid.Row>
+                  <Grid.Row className="create-course-sections">Section 1 (1)</Grid.Row>
+                  <Grid.Row className="create-course-sections">Section 2 (3)</Grid.Row>
                 </Grid>
               </Grid.Column>
             </Grid.Row>
             <Grid.Row style={{ padding: "35px 0px 35px 0px" }}>
               <Grid.Column>
                 <Form>
-                  <label className="form-headers">Add students</label>
+                  <label className="create-course-form-headers">Add students</label>
                   <Form.Input name="Student" placeholder="Student name" />
                   <Form.Input name="Student ID" placeholder="Student ID" />
                   <Form.Input name="Section #" placeholder="Section #" />
@@ -66,9 +58,9 @@ export default class CreateCourse extends React.Component
                 <Table celled>
                   <Table.Header>
                     <Table.Row>
-                      <Table.HeaderCell>Name<Icon name="triangle down" /></Table.HeaderCell>
-                      <Table.HeaderCell width="4">ID<Icon name="triangle down" /></Table.HeaderCell>
-                      <Table.HeaderCell width="3">Section #<Icon name="triangle down" /></Table.HeaderCell>
+                      <Table.HeaderCell><Icon name="triangle down" />Name</Table.HeaderCell>
+                      <Table.HeaderCell width="4"><Icon name="triangle down" />ID</Table.HeaderCell>
+                      <Table.HeaderCell width="3"><Icon name="triangle down" />Section #</Table.HeaderCell>
                     </Table.Row>
                   </Table.Header>
                   <Table.Body>
@@ -112,7 +104,7 @@ export default class CreateCourse extends React.Component
             <Grid.Row>
               <Grid.Column> </Grid.Column>
               <Grid.Column style={{ position: "relative" }}>
-                <Button style={{ position: "absolute", right: "33%" }} size="huge">Create Course</Button>
+                <Button style={{ position: "absolute", right: "37%" }} size="huge">Submit</Button>
               </Grid.Column>
             </Grid.Row>
           </Grid>
