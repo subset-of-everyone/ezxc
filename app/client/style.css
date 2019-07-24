@@ -37,3 +37,12 @@
   font-size: 16px;
 }
 
+
+/* Landing.jsx */
+
+.landing {
+  position: absolute;
+  left: 16%;
+  width: 1000px;
+  top: 40%;
+}
