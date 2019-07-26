@@ -12,8 +12,10 @@ import ListStuffAdmin from "../pages/ListStuffAdmin";
 import AddStuff from "../pages/AddStuff";
 import EditStuff from "../pages/EditStuff";
 import NotFound from "../pages/NotFound";
-import Signin from "../pages/Signin";
-import Signup from "../pages/Signup";
+import Signin_Instructor from "../pages/Signin_Instructor";
+import Signin_Student from "../pages/Signin_Student";
+import Signup_Instructor from "../pages/Signup_Instructor";
+import Signup_Student from "../pages/Signup_Student";
 import Signout from "../pages/Signout";
 import CreateCourse from "../pages/CreateCourse";
 import ViewSection from "../pages/ViewSection";
@@ -31,8 +33,10 @@ class App extends React.Component
               <Route exact path="/" component={Landing}/>
               <Route path="/instructor/create_course" component={CreateCourse}/>
               <Route path="/instructor/view_section" component={ViewSection}/>
-              <Route path="/signin" component={Signin}/>
-              <Route path="/signup" component={Signup}/>
+              <Route path="/signin_instructor" component={Signin_Instructor}/>
+              <Route path="/signin_student" component={Signin_Student}/>
+              <Route path="/signup_instructor" component={Signup_Instructor}/>
+              <Route path="/signup_student" component={Signup_Student}/>
               <ProtectedRoute path="/list" component={ListStuff}/>
               <ProtectedRoute path="/add" component={AddStuff}/>
               <ProtectedRoute path="/edit/:_id" component={EditStuff}/>

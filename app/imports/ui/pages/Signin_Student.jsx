@@ -1,18 +1,21 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import { Link, Redirect } from "react-router-dom";
+import { Meteor } from "meteor/meteor";
 import { Container, Form, Grid, Header, Message, Segment } from "semantic-ui-react";
-import { Accounts } from "meteor/accounts-base";
 
 /**
- * Signup component is similar to signin component, but we attempt to create a new user instead.
+ * Signin_Student page overrides the form’s submit event and call Meteor’s loginWithPassword().
+ * Authentication errors modify the component’s state to be displayed
  */
-export default class Signup extends React.Component
+export default class Signin_Student extends React.Component
 {
-  /** Initialize state fields. */
+
+  /** Initialize component state with properties for login and redirection. */
   constructor(props)
   {
     super(props);
-    this.state = { email: "", password: "", error: "" };
+    this.state = { email: "", password: "", error: "", redirectToReferer: false };
     // Ensure that 'this' is bound to this component in these two functions.
     // https://medium.freecodecamp.org/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -25,11 +28,11 @@ export default class Signup extends React.Component
     this.setState({ [name]: value });
   }
 
-  /** Handle Signup submission using Meteor's account mechanism. */
+  /** Handle Signin_Student submission using Meteor's account mechanism. */
   handleSubmit()
   {
     const { email, password } = this.state;
-    Accounts.createUser({ email, username: email, password }, (err) => 
+    Meteor.loginWithPassword(email, password, (err) =>
     {
       if (err)
       {
@@ -37,20 +40,27 @@ export default class Signup extends React.Component
       }
       else
       {
-        // browserHistory.push('/login');
+        this.setState({ error: "", redirectToReferer: true });
       }
     });
   }
 
-  /** Display the signup form. */
+  /** Render the signin form. */
   render()
   {
+    const { from } = this.props.location.state || { from: { pathname: "/" } };
+    // if correct authentication, redirect to page instead of login screen
+    if (this.state.redirectToReferer)
+    {
+      return <Redirect to={from}/>;
+    }
+    // Otherwise return the Login form.
     return (
         <Container>
           <Grid textAlign="center" verticalAlign="middle" centered columns={2}>
             <Grid.Column>
               <Header as="h2" textAlign="center">
-                Register your account
+                Login to your account
               </Header>
               <Form onSubmit={this.handleSubmit}>
                 <Segment stacked>
@@ -76,14 +86,14 @@ export default class Signup extends React.Component
                 </Segment>
               </Form>
               <Message>
-                Already have an account? Login <Link to="/signin">here</Link>
+                <Link to="/signup">Click here to Register</Link>
               </Message>
               {this.state.error === "" ? (
                   ""
               ) : (
                   <Message
                       error
-                      header="Registration was not successful"
+                      header="Login was not successful"
                       content={this.state.error}
                   />
               )}
@@ -93,3 +103,8 @@ export default class Signup extends React.Component
     );
   }
 }
+
+/** Ensure that the React Router location object is available in case we need to redirect. */
+Signin_Student.propTypes = {
+  location: PropTypes.object,
+};
