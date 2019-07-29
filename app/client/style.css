@@ -17,24 +17,22 @@
 
 /* CreateCourse.jsx */
 
-.create-course-table {
-  border: none !important;
-  box-shadow: none !important;
-  background-color: #F9FAFB !important;
+.create-course-form-headers {
+  font-size: 24px;
+  font-weight: bold;
+  display: block;
 }
 
 .create-course-buttons {
-  position: absolute;
-  left: 47%;
-  margin-top: 30px;
   color: #FF7042 !important;
   border-radius: 50%;
   box-shadow: 0 7px 10px gray !important;
 }
 
-.create-course-sections {
-  padding: 6px 0 6px 0 !important;
-  font-size: 16px;
+.create-course-table {
+  border: none !important;
+  box-shadow: none !important;
+  background-color: #F9FAFB !important;
 }
 
 
