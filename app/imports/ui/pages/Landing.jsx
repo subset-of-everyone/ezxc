@@ -13,7 +13,7 @@ class Landing extends React.Component
         <Divider />
         <Header as="h4" textAlign="right" style={{ fontWeight: "normal" }}>Sign in <a>here</a> to start.</Header>
         <Button as={NavLink} exact to="/signup_student"> Student </Button>
-        <Button as={NavLink} exact to="/signup_student"> Instructor </Button>
+        <Button as={NavLink} exact to="/signup_instructor"> Instructor </Button>
       </div>
 
 
