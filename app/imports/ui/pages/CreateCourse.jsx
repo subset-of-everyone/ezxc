@@ -17,10 +17,10 @@ export default class CreateCourseAlternate extends React.Component
           <Grid columns={2} style={{ marginBottom: "20px" }}>
             <Grid.Row>
               <Grid.Column>
-                <label className="create-course-form-headers">Course name</label>
+                <label className="create-course-form-headers">Course Name</label>
               </Grid.Column>
               <Grid.Column style={{ display: "flex", justifyContent: "space-between" }}>
-                <label className="create-course-form-headers">Add sections</label>
+                <label className="create-course-form-headers">Add Sections</label>
                 <Button inverted style={{ padding: "0 0 0 0" }} circular icon>
                   <Icon className="create-course-buttons" name="plus circle" size="big" />
                 </Button>
@@ -31,14 +31,14 @@ export default class CreateCourseAlternate extends React.Component
                 <Form.Input defaultValue="ICS 239: Intro to Cybersecurity" fluid name="Course name"/>
               </Grid.Column>
               <Grid.Column style={{ display: "flex", flexDirection: "column" }}>
-                <Form.Input defaultValue="Section 1" style={{ paddingBottom: "15px" }} fluid name="Add sections 1"/>
+                <Form.Input defaultValue="Section 1" style={{ paddingBottom: "15px", border: "none" }} fluid name="Add sections 1"/>
                 <Form.Input defaultValue="Section 2" style={{ paddingBottom: "15px" }} fluid name="Add sections 2"/>
                 <Form.Input defaultValue="Section 3" style={{ paddingBottom: "15px" }} fluid name="Add sections 2"/>
                 <Form.Input defaultValue="Section 4" style={{ paddingBottom: "15px" }} fluid name="Add sections 2"/>
               </Grid.Column>
             </Grid.Row>
           </Grid>
-          <label className="create-course-form-headers">Add students</label>
+          <label className="create-course-form-headers">Add Students</label>
           <Table style={{ position: "absolute", width: "1110px", right: "17%", marginTop: "40px" }} definition celled>
             <Table.Header>
               <Table.Row>
