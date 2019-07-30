@@ -40,4 +40,23 @@
   background-color: #F9FAFB !important;
 }
 
+.create-course-table-input {
+  margin: auto auto auto 15px !important;
+}
 
+<<<<<<< Updated upstream
+=======
+/* Landing.jsx */
+
+.landing {
+  position: absolute;
+  left: 16%;
+  width: 1000px;
+  top: 40%;
+}
+
+
+
+/* StudentSignUp.jsx */
+
+>>>>>>> Stashed changes

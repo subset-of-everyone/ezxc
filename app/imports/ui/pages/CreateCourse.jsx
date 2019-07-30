@@ -38,8 +38,13 @@ export default class CreateCourseAlternate extends React.Component
               </Grid.Column>
             </Grid.Row>
           </Grid>
+<<<<<<< Updated upstream
           <label className="create-course-form-headers">Add students</label>
           <Table style={{ position: "absolute", width: "1110px", right: "17%", marginTop: "40px" }} definition celled>
+=======
+          <label className="create-course-form-headers">Add Students</label>
+          <Table style={{ position: "absolute", width: "1060px", marginTop: "40px", left: "8%" }} definition celled>
+>>>>>>> Stashed changes
             <Table.Header>
               <Table.Row>
                 <Table.HeaderCell />
@@ -51,34 +56,50 @@ export default class CreateCourseAlternate extends React.Component
             <Table.Body>
               <Table.Row>
                 <Table.Cell collapsing>
-                  <Button>Delete</Button>
+                  <Button compact style={{ backgroundColor: "#F7F7F7" }} size="large" icon="trash"/>
                 </Table.Cell>
-                <Table.Cell><Form.Input defaultValue="Dave Alonzo" fluid/></Table.Cell>
-                <Table.Cell><Form.Input defaultValue="0000000" fluid/></Table.Cell>
+                <Table.Cell selectable>
+                  <Form.Input className="create-course-table-input" transparent defaultValue="Dave Alonzo" fluid/>
+                </Table.Cell>
+                <Table.Cell selectable>
+                  <Form.Input className="create-course-table-input" transparent defaultValue="0000000" fluid/>
+                </Table.Cell>
                 <Table.Cell><Form.Select defaultValue="2" options={ sections } fluid/></Table.Cell>
               </Table.Row>
               <Table.Row>
                 <Table.Cell collapsing>
-                  <Button>Delete</Button>
+                  <Button compact style={{ backgroundColor: "#F7F7F7" }} size="large" icon="trash"/>
                 </Table.Cell>
-                <Table.Cell><Form.Input defaultValue="Gordon Hayman" fluid/></Table.Cell>
-                <Table.Cell><Form.Input defaultValue="0000001" fluid/></Table.Cell>
+                <Table.Cell selectable>
+                  <Form.Input className="create-course-table-input" transparent defaultValue="Gordon Hayman" fluid/>
+                </Table.Cell>
+                <Table.Cell selectable>
+                  <Form.Input className="create-course-table-input" transparent defaultValue="0000001" fluid/>
+                </Table.Cell>
                 <Table.Cell><Form.Select defaultValue="1" options={ sections } fluid/></Table.Cell>
               </Table.Row>
               <Table.Row>
-                <Table.Cell>
-                  <Button>Delete</Button>
+                <Table.Cell collapsing>
+                  <Button compact style={{ backgroundColor: "#F7F7F7" }} size="large" icon="trash"/>
                 </Table.Cell>
-                <Table.Cell><Form.Input defaultValue="Alfred Mourning" fluid/></Table.Cell>
-                <Table.Cell><Form.Input defaultValue="0000010" fluid/></Table.Cell>
+                <Table.Cell selectable>
+                  <Form.Input className="create-course-table-input" transparent defaultValue="Alfred Mourning" fluid/>
+                </Table.Cell>
+                <Table.Cell selectable>
+                  <Form.Input className="create-course-table-input" transparent defaultValue="0000010" fluid/>
+                </Table.Cell>
                 <Table.Cell><Form.Select defaultValue="2" options={ sections } fluid/></Table.Cell>
               </Table.Row>
               <Table.Row>
                 <Table.Cell collapsing>
-                  <Button>Delete</Button>
+                  <Button compact style={{ backgroundColor: "#F7F7F7" }} size="large" icon="trash"/>
                 </Table.Cell>
-                <Table.Cell><Form.Input defaultValue="Connor Zamon" fluid/></Table.Cell>
-                <Table.Cell><Form.Input defaultValue="0000011" fluid/></Table.Cell>
+                <Table.Cell selectable>
+                  <Form.Input className="create-course-table-input" transparent defaultValue="Connor Zamon" fluid/>
+                </Table.Cell>
+                <Table.Cell selectable>
+                  <Form.Input className="create-course-table-input" transparent defaultValue="0000011" fluid/>
+                </Table.Cell>
                 <Table.Cell><Form.Select defaultValue="2" options={ sections } fluid/></Table.Cell>
               </Table.Row>
             </Table.Body>
@@ -100,6 +121,7 @@ export default class CreateCourseAlternate extends React.Component
               </Table.Row>
             </Table.Footer>
           </Table>
+          <Button style={{ position: "absolute", top: "1000px", left: "1100px" }} size="massive">Submit</Button>
         </Container>
     );
   }
