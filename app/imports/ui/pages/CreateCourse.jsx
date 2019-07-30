@@ -17,10 +17,10 @@ export default class CreateCourseAlternate extends React.Component
           <Grid columns={2} style={{ marginBottom: "20px" }}>
             <Grid.Row>
               <Grid.Column>
-                <label className="create-course-form-headers">Course name</label>
+                <label className="create-course-form-headers">Course Name</label>
               </Grid.Column>
               <Grid.Column style={{ display: "flex", justifyContent: "space-between" }}>
-                <label className="create-course-form-headers">Add sections</label>
+                <label className="create-course-form-headers">Add Sections</label>
                 <Button inverted style={{ padding: "0 0 0 0" }} circular icon>
                   <Icon className="create-course-buttons" name="plus circle" size="big" />
                 </Button>
@@ -38,13 +38,8 @@ export default class CreateCourseAlternate extends React.Component
               </Grid.Column>
             </Grid.Row>
           </Grid>
-<<<<<<< Updated upstream
-          <label className="create-course-form-headers">Add students</label>
-          <Table style={{ position: "absolute", width: "1110px", right: "17%", marginTop: "40px" }} definition celled>
-=======
           <label className="create-course-form-headers">Add Students</label>
           <Table style={{ position: "absolute", width: "1060px", marginTop: "40px", left: "8%" }} definition celled>
->>>>>>> Stashed changes
             <Table.Header>
               <Table.Row>
                 <Table.HeaderCell />
