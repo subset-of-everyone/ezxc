@@ -19,6 +19,7 @@ import Signup_Student from "../pages/Signup_Student";
 import Signout from "../pages/Signout";
 import CreateCourse from "../pages/CreateCourse";
 import ViewSection from "../pages/ViewSection";
+import StudentHomepage from "../pages/StudentHomepage";
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component
@@ -33,6 +34,7 @@ class App extends React.Component
               <Route exact path="/" component={Landing}/>
               <Route path="/instructor/create_course" component={CreateCourse}/>
               <Route path="/instructor/view_section" component={ViewSection}/>
+              <Route path="/student/home" component={StudentHomepage}/>
               <Route path="/signin_instructor" component={Signin_Instructor}/>
               <Route path="/signin_student" component={Signin_Student}/>
               <Route path="/signup_instructor" component={Signup_Instructor}/>
