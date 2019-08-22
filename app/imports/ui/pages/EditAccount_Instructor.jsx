@@ -4,7 +4,7 @@ import { Container, Form, Grid, Header, Message, Segment } from "semantic-ui-rea
 import { Accounts } from "meteor/accounts-base";
 
 /**
- * Signup component is similar to signin component, but we attempt to create a new user instead.
+ * Signup_Student component is similar to signin component, but we attempt to create a new user instead.
  */
 export default class Signup extends React.Component
 {
@@ -12,11 +12,21 @@ export default class Signup extends React.Component
   constructor(props)
   {
     super(props);
-    this.state = { email: "", password: "", error: "" };
+    this.state = {
+      first_name: "",
+      last_name: "",
+      email: "",
+      password: "",
+      error: "",
+      ta: false,
+      instructor: false
+    };
     // Ensure that 'this' is bound to this component in these two functions.
     // https://medium.freecodecamp.org/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleCheckedTA = this.handleCheckedTA.bind(this);
+    this.handleCheckedIns = this.handleCheckedIns.bind(this);
   }
 
   /** Update the form controls each time the user interacts with them. */
@@ -25,11 +35,26 @@ export default class Signup extends React.Component
     this.setState({ [name]: value });
   }
 
-  /** Handle Signup submission using Meteor's account mechanism. */
+  handleCheckedTA () {
+    this.setState({ ta: !this.state.ta});
+  }
+
+  handleCheckedIns () {
+    this.setState({ instructor: !this.state.instructor});
+  }
+
+  /** Handle Signup_Student submission using Meteor's account mechanism. */
   handleSubmit()
   {
-    const { email, password } = this.state;
-    Accounts.createUser({ email, username: email, password }, (err) => 
+    const { first_name, last_name, email, password, ta, instructor } = this.state;
+    Accounts.createUser({
+      first_name,
+      last_name,
+      email, username: email,
+      password,
+      ta,
+      instructor
+    }, (err) =>
     {
       if (err)
       {
@@ -54,6 +79,27 @@ export default class Signup extends React.Component
               </Header>
               <Form onSubmit={this.handleSubmit}>
                 <Segment stacked>
+                  <Form.Input
+                      label="First Name"
+                      icon="user"
+                      iconPosition="left"
+                      name="first_name"
+                      type="first_name"
+                      placeholder="First name"
+                      onChange={this.handleChange}
+                  />
+                  <Form.Input
+                      label="Last Name"
+                      icon="lock"
+                      iconPosition="left"
+                      name="last_name"
+                      placeholder="Last name"
+                      type="first_name"
+                      onChange={this.handleChange}
+                  />
+                  <label black>Choose your role</label>
+                  <Form.Checkbox label = 'TA' name= 'ta' onChange={ this.handleCheckedTA}/>
+                  <Form.Checkbox label = 'Instructor' name= 'instructor' onChange={ this.handleCheckedIns} />
                   <Form.Input
                       label="Email"
                       icon="user"

@@ -18,6 +18,22 @@ function createUser(email, password, role)
   }
 }
 
+Accounts.onCreateUser((options, user) => {
+  const customizedUser = Object.assign({
+    first_name: options.first_name,
+    last_name: options.last_name,
+    ta: options.ta,
+    instructor: options.instructor,
+  }, user);
+
+  // We still want the default hook's 'profile' behavior.
+  if (options.profile) {
+    customizedUser.profile = options.profile;
+  }
+
+  return customizedUser;
+});
+
 /** When running app for first time, pass a settings file to set up a default user account. */
 if (Meteor.users.find().count() === 0)
 {

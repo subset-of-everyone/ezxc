@@ -5,7 +5,8 @@ import { Tracker } from "meteor/tracker";
 const Instructors = new Mongo.Collection("Instructors");
 
 const InstructorSchema = new SimpleSchema({
-  instructorName: String,
+  instructorFirstName: String,
+  instructorLastName: String,
   instructorType: ["TA", "Professor"],
   sectionNumber: String,
 }, { tracker: Tracker });
